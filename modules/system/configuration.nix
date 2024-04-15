@@ -45,7 +45,7 @@
     # Nix settings, auto cleanup and enable flakes
     nix = {
         settings.auto-optimise-store = true;
-        settings.allowed-users = [ "notus" ];
+        settings.allowed-users = [ "lg" ];
         gc = {
             automatic = true;
             dates = "weekly";
@@ -78,7 +78,7 @@
     };
 
     # Set up user and enable sudo
-    users.users.notus = {
+    users.users.lg = {
         isNormalUser = true;
         extraGroups = [ "input" "wheel" ];
         shell = pkgs.zsh;
@@ -117,7 +117,7 @@
         doas = {
             enable = true;
             extraRules = [{
-                users = [ "notus" ];
+                users = [ "lg" ];
                 keepEnv = true;
                 persist = true;
             }];
