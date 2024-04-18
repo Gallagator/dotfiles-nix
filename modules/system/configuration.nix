@@ -12,6 +12,8 @@
         acpi tlp git
     ];
 
+    nixpkgs.config.allowUnfree = true;
+
     # Install fonts
     fonts = {
         fonts = with pkgs; [
@@ -70,12 +72,22 @@
     };
 
     # Set up locales (timezone and keyboard layout)
-    time.timeZone = "America/Los_Angeles";
-    i18n.defaultLocale = "en_US.UTF-8";
-    console = {
-        font = "Lat2-Terminus16";
-        keyMap = "us";
+    time.timeZone = "Europe/London";
+    i18n.defaultLocale = "en_GB.UTF-8";
+
+    i18n.extraLocaleSettings = {
+      LC_ADDRESS = "en_GB.UTF-8";
+      LC_IDENTIFICATION = "en_GB.UTF-8";
+      LC_MEASUREMENT = "en_GB.UTF-8";
+      LC_MONETARY = "en_GB.UTF-8";
+      LC_NAME = "en_GB.UTF-8";
+      LC_NUMERIC = "en_GB.UTF-8";
+      LC_PAPER = "en_GB.UTF-8";
+      LC_TELEPHONE = "en_GB.UTF-8";
+      LC_TIME = "en_GB.UTF-8";
     };
+
+    console.keyMap = "uk";
 
     # Set up user and enable sudo
     users.users.lg = {
@@ -97,7 +109,7 @@
 
     # Set environment variables
     environment.variables = {
-        NIXOS_CONFIG = "$HOME/.config/nixos/configuration.nix";
+        NIXOS_CONFIG = "$HOME/.config/nixos/modules/system/configuration.nix";
         NIXOS_CONFIG_DIR = "$HOME/.config/nixos/";
         XDG_DATA_HOME = "$HOME/.local/share";
         PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
@@ -113,7 +125,7 @@
 
     # Security 
     security = {
-        sudo.enable = false;
+        sudo.enable = true;
         doas = {
             enable = true;
             extraRules = [{
