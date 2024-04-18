@@ -10,7 +10,6 @@
         hyprland.enable = true;
         wofi.enable = true;
 
-
         # cli
         nvim.enable = true;
         zsh.enable = true;

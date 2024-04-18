@@ -66,6 +66,7 @@ in {
                 gcm = "git checkout -";
                 gst = "git status";
                 rg = "rg -p --no-heading -g \"!tags\" --no-ignore --follow";
+                gd = "git diff";
             };
 
             # Source all plugins, nix-style

@@ -22,6 +22,7 @@ in {
             screen bandw maintenance
             wf-recorder anki-bin 
             discord zellij steam
+            keepassxc obs-studio
         ];
     };
 }
