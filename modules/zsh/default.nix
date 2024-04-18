@@ -60,6 +60,12 @@ in {
                 tree = "exa --tree --icons";
                 nd = "nix develop -c $SHELL";
                 rebuild = "doas nixos-rebuild switch --flake $NIXOS_CONFIG_DIR --fast; notify-send 'Rebuild complete\!'";
+                ga = "git add";
+                gc = "git commit";
+                gp = "git push";
+                gcm = "git checkout -";
+                gst = "git status";
+                rg = "rg -p --no-heading -g \"!tags\" --no-ignore --follow";
             };
 
             # Source all plugins, nix-style
