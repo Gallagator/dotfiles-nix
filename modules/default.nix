@@ -2,7 +2,7 @@
 
 {
     nixpkgs.config.allowUnfree = true;
-    home.stateVersion = "21.03";
+    home.stateVersion = "22.11";
     imports = [
         # gui
         ./firefox

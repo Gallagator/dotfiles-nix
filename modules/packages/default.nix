@@ -17,7 +17,7 @@ in {
             unzip lowdown zk
             grim slurp slop
             imagemagick age libnotify
-            git python3 lua zig 
+            git python3 lua zig sbt
             mpv firefox pqiv
             screen bandw maintenance
             wf-recorder anki-bin 
