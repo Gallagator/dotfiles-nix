@@ -67,6 +67,8 @@ in {
                 gst = "git status";
                 rg = "rg -p --no-heading -g \"!tags\" --no-ignore --follow";
                 gd = "git diff";
+                ze = "zellij";
+                zea = "ze a";
             };
 
             # Source all plugins, nix-style
