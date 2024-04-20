@@ -11,7 +11,7 @@ in {
             enable = true;
 
             # Install extensions from NUR
-            extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            profiles.lg.extensions = with pkgs.nur.repos.rycee.firefox-addons; [
                 decentraleyes
                 ublock-origin
                 clearurls

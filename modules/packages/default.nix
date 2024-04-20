@@ -12,7 +12,7 @@ in {
     config = mkIf cfg.enable {
     	home.packages = with pkgs; [
             ripgrep ffmpeg tealdeer
-            exa htop fzf
+            eza htop fzf
             pass gnupg bat
             unzip lowdown zk
             grim slurp slop
@@ -24,6 +24,12 @@ in {
             discord zellij steam
             keepassxc obs-studio
             neofetch
+            # chisel
+            verilator bitwuzla
+            cvc5 cvc4 verilog
+            buildPackages.scala
+            # apps
+            musescore
         ];
     };
 }

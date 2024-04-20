@@ -19,7 +19,7 @@ in {
         home.file.".config/nvim/settings.lua".source = ./init.lua;
         
         home.packages = with pkgs; [
-            rnix-lsp nixfmt # Nix
+            nixfmt-classic # Nix
             sumneko-lua-language-server stylua # Lua
         ];
 
@@ -69,7 +69,6 @@ in {
                         lua << EOF
                         require('lspconfig').rust_analyzer.setup{}
                         require('lspconfig').sumneko_lua.setup{}
-                        require('lspconfig').rnix.setup{}
                         require('lspconfig').zk.setup{}
                         EOF
                     '';

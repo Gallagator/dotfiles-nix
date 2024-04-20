@@ -16,8 +16,8 @@ in {
             dotDir = ".config/zsh";
 
             enableCompletion = true;
-            enableAutosuggestions = true;
-            enableSyntaxHighlighting = true;
+            autosuggestion.enable = true;
+            syntaxHighlighting.enable = true;
 
             # .zshrc
             initExtra = ''
@@ -56,8 +56,8 @@ in {
                 mv = "mv -iv";
                 cp = "cp -riv";
                 cat = "bat --paging=never --style=plain";
-                ls = "exa --icons";
-                tree = "exa --tree --icons";
+                ls = "eza --icons";
+                tree = "eza --tree --icons";
                 nd = "nix develop -c $SHELL";
                 rebuild = "doas nixos-rebuild switch --flake $NIXOS_CONFIG_DIR --fast; notify-send 'Rebuild complete\!'";
                 ga = "git add";

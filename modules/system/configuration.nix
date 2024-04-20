@@ -8,16 +8,19 @@
     programs.zsh.enable = true;
     programs.steam.enable = true;
 
+
     # Laptop-specific packages (the other ones are installed in `packages.nix`)
     environment.systemPackages = with pkgs; [
         acpi tlp git
     ];
 
+    programs.nix-ld.enable = true;
+    
     nixpkgs.config.allowUnfree = true;
 
     # Install fonts
     fonts = {
-        fonts = with pkgs; [
+        packages = with pkgs; [
             jetbrains-mono
             roboto
             openmoji-color
@@ -41,6 +44,7 @@
                 xdg-desktop-portal-wlr
                 xdg-desktop-portal-gtk
             ];
+            config.common.default = "*";
         };
     };
 
@@ -62,7 +66,7 @@
 
     # Boot settings: clean /tmp/, latest kernel and enable bootloader
     boot = {
-        cleanTmpDir = true;
+        tmp.cleanOnBoot = true;
         loader = {
         systemd-boot.enable = true;
         systemd-boot.editor = false;
@@ -164,5 +168,5 @@
     };
 
     # Do not touch
-    system.stateVersion = "23.11";
+    system.stateVersion = "20.09";
 }
