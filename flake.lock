@@ -37,6 +37,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1624561540,
+        "narHash": "sha256-izJ2PYZMGMsSkg+e7c9A1x3t/yOLT+qzUM6WQsc2tqo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c6a049a3d32293b24c0f894a840872cf67fd7c11",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nur": {
       "locked": {
         "lastModified": 1657909523,
@@ -56,7 +72,8 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "nur": "nur"
+        "nur": "nur",
+        "vivado_nur": "vivado_nur"
       }
     },
     "utils": {
@@ -71,6 +88,24 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "vivado_nur": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1705321519,
+        "narHash": "sha256-tz2XbZnNJ3USumpM6T6xGINkTSTswq/SYaIlCA/3KAE=",
+        "owner": "lschuermann",
+        "repo": "nur-packages",
+        "rev": "20e97bff02d489b41ebe4127a8413bcd117aaf44",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lschuermann",
+        "repo": "nur-packages",
         "type": "github"
       }
     }
