@@ -1,6 +1,7 @@
 { inputs, pkgs, config, ... }:
 
 {
+    nixpkgs.config.allowUnfree = true;
     home.stateVersion = "21.03";
     imports = [
         # gui
@@ -10,6 +11,7 @@
         ./dunst
         ./hyprland
         ./wofi
+        ./vivado
 
         # cli
         ./nvim
