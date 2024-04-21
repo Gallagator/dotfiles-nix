@@ -15,13 +15,13 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
 
-        vivado_nur = {
-            url = "github:lschuermann/nur-packages" ;
+        nixvim = {
+            url = "github:Gallagator/nixvim-config";
         };
     };
 
     # All outputs for the system (configs)
-    outputs = { home-manager, nixpkgs, nur, vivado_nur, ... }@inputs:
+    outputs = { home-manager, nixpkgs, nur, ... }@inputs:
         let
             system = "x86_64-linux"; #current system
             pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
