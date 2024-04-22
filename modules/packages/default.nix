@@ -28,7 +28,7 @@ in {
             verilator bitwuzla
             cvc5 cvc4 verilog
             buildPackages.scala
-            z3
+            z3 gtkwave
             # apps
             musescore
         ];
